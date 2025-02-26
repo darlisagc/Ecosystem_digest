@@ -1,4 +1,4 @@
-# Monthly Digest: GitHub Activity
+# Monthly Digest: Java Tooling GitHub Activity
 
 Period: 2025-01-27 to 2025-02-26
 
