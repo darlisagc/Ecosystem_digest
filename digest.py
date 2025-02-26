@@ -89,7 +89,7 @@ for repo, activity in repo_activities.items():
     if not any(activity.values()):
         digest_content += "_No significant activity in this period._\n\n"
 
-# Generate file name with month and year (e.g., github_digest_February_2025.md)
+# Generate file name with month and year (e.g., Java tooling_digest_February_2025.md)
 filename = f"github_digest_{end_date.strftime('%B_%Y')}.md"
 with open(filename, "w") as file:
     file.write(digest_content)
