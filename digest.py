@@ -39,13 +39,13 @@ def fetch_github_activity(repo):
             pr_title = pr["title"]
 
             if created_at >= start_date:
-                activity["opened"].append(f"[#{pr_number} - {pr_title}]({pr_link})")
+                activity["opened"].append(f"- [#{pr_number} - {pr_title}]({pr_link})")
 
             if closed_at and datetime.datetime.strptime(closed_at, "%Y-%m-%dT%H:%M:%SZ") >= start_date:
-                activity["closed"].append(f"[#{pr_number} - {pr_title}]({pr_link})")
+                activity["closed"].append(f"- [#{pr_number} - {pr_title}]({pr_link})")
 
             if merged_at and datetime.datetime.strptime(merged_at, "%Y-%m-%dT%H:%M:%SZ") >= start_date:
-                activity["merged"].append(f"[#{pr_number} - {pr_title}]({pr_link})")
+                activity["merged"].append(f"- [#{pr_number} - {pr_title}]({pr_link})")
 
     # Fetch Issues
     issues_url = f"{github_api_base}{repo}/issues?state=all&per_page=100"
@@ -61,10 +61,10 @@ def fetch_github_activity(repo):
                 issue_title = issue["title"]
 
                 if created_at >= start_date:
-                    activity["opened"].append(f"[#{issue_number} - {issue_title}]({issue_link})")
+                    activity["opened"].append(f"- [#{issue_number} - {issue_title}]({issue_link})")
 
                 if closed_at and datetime.datetime.strptime(closed_at, "%Y-%m-%dT%H:%M:%SZ") >= start_date:
-                    activity["closed"].append(f"[#{issue_number} - {issue_title}]({issue_link})")
+                    activity["closed"].append(f"- [#{issue_number} - {issue_title}]({issue_link})")
 
     return activity
 
@@ -94,4 +94,4 @@ filename = f"github_digest_{end_date.strftime('%B_%Y')}.md"
 with open(filename, "w") as file:
     file.write(digest_content)
 
-print("Monthly digest saved to github_digest.md")
+print(f"Monthly digest saved to {filename}")
