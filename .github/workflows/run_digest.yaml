@@ -27,6 +27,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add github_digest.md
+          git add github_digest_February_2025.md
           git commit -m "Add monthly digest for $(date -u +'%Y-%m-%d')"
           git push
