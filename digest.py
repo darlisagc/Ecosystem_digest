@@ -23,10 +23,10 @@ headers = {
 
 # Function to fetch GitHub activity within the last 30 days
 def fetch_github_activity(repo):
-    # Separate categories:
+    # Categories:
     # - issues_opened: issues created within the period
     # - issues_closed: issues closed within the period
-    # - pr_merged: pull requests that are merged within the period
+    # - pr_merged: pull requests that are merged (and therefore closed) within the period
     activity = {"issues_opened": [], "issues_closed": [], "pr_merged": []}
 
     # Fetch PRs and include only those that are merged
@@ -44,13 +44,13 @@ def fetch_github_activity(repo):
                     pr_title = pr["title"]
                     activity["pr_merged"].append(f"- [#{pr_number} - {pr_title}]({pr_link})")
 
-    # Fetch issues (exclude PRs)
+    # Fetch issues (excluding PRs)
     issues_url = f"{github_api_base}{repo}/issues?state=all&per_page=100"
     response = requests.get(issues_url, headers=headers)
     if response.status_code == 200:
         issues = response.json()
         for issue in issues:
-            # Skip PRs which are also listed under issues
+            # Skip items that are actually PRs
             if "pull_request" in issue:
                 continue
 
@@ -68,7 +68,7 @@ def fetch_github_activity(repo):
 
     return activity
 
-# Fetch activity for each repo
+# Fetch activity for each repository
 repo_activities = {repo: fetch_github_activity(repo) for repo in repos}
 
 # Create digest text
@@ -81,12 +81,12 @@ for repo, activity in repo_activities.items():
 
     if activity["issues_opened"]:
         digest_content += "**Issues opened:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
+    if activity["pr_merged"]:
+        digest_content += "**PRs merged & closed:**\n" + "\n".join(activity["pr_merged"]) + "\n\n"
     if activity["issues_closed"]:
         digest_content += "**Issues closed:**\n" + "\n".join(activity["issues_closed"]) + "\n\n"
-    if activity["pr_merged"]:
-        digest_content += "**PRs Merged:**\n" + "\n".join(activity["pr_merged"]) + "\n\n"
 
-    if not (activity["issues_opened"] or activity["issues_closed"] or activity["pr_merged"]):
+    if not (activity["issues_opened"] or activity["pr_merged"] or activity["issues_closed"]):
         digest_content += "_No significant activity in this period._\n\n"
 
 # Generate file name with month and year (e.g., github_digest_February_2025.md)
