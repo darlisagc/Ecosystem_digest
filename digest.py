@@ -12,24 +12,29 @@ repos = [
 # GitHub API base URL
 github_api_base = "https://api.github.com/repos/"
 
-# Calculate the start and end dates for the past 30 days
-end_date = datetime.datetime.utcnow()
-start_date = end_date - datetime.timedelta(days=30)
+# Calculate the start and end dates for the previous calendar month
+now = datetime.datetime.utcnow()
+# First day of the current month
+first_day_current_month = datetime.datetime(now.year, now.month, 1)
+# Last day of the previous month is one day before the first day of the current month
+end_date = first_day_current_month - datetime.timedelta(days=1)
+# Start date is the first day of the previous month
+start_date = datetime.datetime(end_date.year, end_date.month, 1)
 
 # GitHub API headers
 headers = {
     "Accept": "application/vnd.github.v3+json"
 }
 
-# Function to fetch GitHub activity within the last 30 days
+# Function to fetch GitHub activity within the previous calendar month
 def fetch_github_activity(repo):
     # Categories:
-    # - issues_opened: issues created within the period
-    # - issues_closed: issues closed within the period
-    # - pr_merged: pull requests that are merged (and therefore closed) within the period
+    # - issues_opened: issues created during the previous month
+    # - issues_closed: issues closed during the previous month
+    # - pr_merged: pull requests that were merged (and therefore closed) during the previous month
     activity = {"issues_opened": [], "issues_closed": [], "pr_merged": []}
 
-    # Fetch PRs and include only those that are merged
+    # Fetch PRs and include only those that are merged within the period
     prs_url = f"{github_api_base}{repo}/pulls?state=all&per_page=100"
     response = requests.get(prs_url, headers=headers)
     if response.status_code == 200:
@@ -38,7 +43,7 @@ def fetch_github_activity(repo):
             merged_at = pr.get("merged_at")
             if merged_at:
                 merged_date = datetime.datetime.strptime(merged_at, "%Y-%m-%dT%H:%M:%SZ")
-                if merged_date >= start_date:
+                if start_date <= merged_date <= end_date:
                     pr_link = pr["html_url"]
                     pr_number = pr["number"]
                     pr_title = pr["title"]
@@ -60,11 +65,13 @@ def fetch_github_activity(repo):
             issue_number = issue["number"]
             issue_title = issue["title"]
 
-            if created_at >= start_date:
+            if start_date <= created_at <= end_date:
                 activity["issues_opened"].append(f"- [#{issue_number} - {issue_title}]({issue_link})")
 
-            if closed_at and datetime.datetime.strptime(closed_at, "%Y-%m-%dT%H:%M:%SZ") >= start_date:
-                activity["issues_closed"].append(f"- [#{issue_number} - {issue_title}]({issue_link})")
+            if closed_at:
+                closed_date = datetime.datetime.strptime(closed_at, "%Y-%m-%dT%H:%M:%SZ")
+                if start_date <= closed_date <= end_date:
+                    activity["issues_closed"].append(f"- [#{issue_number} - {issue_title}]({issue_link})")
 
     return activity
 
@@ -80,7 +87,7 @@ for repo, activity in repo_activities.items():
     digest_content += f"## [{repo}]({repo_link})\n\n"
 
     if activity["issues_opened"]:
-        digest_content += "**Issues opened:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
+        digest_content += "**Issues open:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
     if activity["pr_merged"]:
         digest_content += "**PRs merged & closed:**\n" + "\n".join(activity["pr_merged"]) + "\n\n"
     if activity["issues_closed"]:
