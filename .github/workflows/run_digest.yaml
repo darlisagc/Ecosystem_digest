@@ -25,6 +25,7 @@ jobs:
 
       - name: Run digest script
         run: |
+          python digest.py
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add github_digest_*.md
