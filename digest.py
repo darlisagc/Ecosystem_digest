@@ -13,7 +13,7 @@ repos = [
 github_api_base = "https://api.github.com/repos/"
 
 # Calculate the start and end dates for the previous calendar month
-now = datetime.datetime.utcnow()
+now = datetime.datetime.now(datetime.timezone.utc)
 # First day of the current month
 first_day_current_month = datetime.datetime(now.year, now.month, 1)
 # Last day of the previous month is one day before the first day of the current month
