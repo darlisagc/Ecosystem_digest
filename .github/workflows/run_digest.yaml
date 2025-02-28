@@ -6,7 +6,7 @@ on:
   workflow_dispatch:   # Allows manual triggering
 
 permissions:
-   contents: write
+  contents: write
 
 jobs:
   generate-digest:
@@ -24,12 +24,12 @@ jobs:
         run: pip install requests
 
       - name: Run digest script
+        env:
+          TEST_DATE: "2025-03-01"
         run: python test.py
 
       - name: Commit and push digest file
-        env:
-           TEST_DATE: "2025-03-01"
-        run: python test.py
+        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add github_digest_*.md
