@@ -11,6 +11,7 @@ This digest keeps you informed on new issues, closed issues, and merged pull req
 - [bloxbean/yaci-store](https://github.com/bloxbean/yaci-store) 🔗
 - [bloxbean/yaci-devkit](https://github.com/bloxbean/yaci-devkit) 🔗
 
-Please note that all these projects are open source, and everyone is welcome to contribute! 🤝 Open collaboration and community contributions drive our progress and innovation.
+Please note that all these projects are open source, and everyone is welcome to contribute! 
+🤝 Open collaboration and community contributions drive our progress and innovation.
 
 Stay updated with the latest developments and improvements and feel free to explore, share, and collaborate! 🎉
