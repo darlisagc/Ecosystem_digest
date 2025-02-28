@@ -2,6 +2,7 @@
 # Java Tooling Ecosystem Updates 🚀
 
 Welcome to our monthly digest repository — your go-to source for the latest GitHub activity across our cutting-edge projects! 
+
 This digest keeps you informed on new issues, closed issues, and merged pull requests, ensuring you never miss a beat in our evolving ecosystem. 💡📊
 
 ### Projects Covered:
