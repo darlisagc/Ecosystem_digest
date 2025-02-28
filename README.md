@@ -1,5 +1,5 @@
 
-# Java Tooling Ecosystem Updates 🚀
+# Java Tooling Updates 🚀
 
 Welcome to our monthly digest repository — your go-to source for the latest GitHub activity across some of our cutting-edge projects! 
 
