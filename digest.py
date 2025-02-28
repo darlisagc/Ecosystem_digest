@@ -79,7 +79,7 @@ def fetch_github_activity(repo):
 repo_activities = {repo: fetch_github_activity(repo) for repo in repos}
 
 # Create digest text
-digest_content = "# Monthly Digest: GitHub Activity\n\n"
+digest_content = "# Monthly Digest: Java Tooling GitHub Activities\n\n"
 digest_content += f"Period: {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}\n\n"
 
 for repo, activity in repo_activities.items():
