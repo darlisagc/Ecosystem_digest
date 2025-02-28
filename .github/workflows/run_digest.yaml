@@ -24,11 +24,6 @@ jobs:
         run: pip install requests
 
       - name: Run digest script
-        env:
-          TEST_DATE: "2025-03-01"
-        run: python test.py
-
-      - name: Commit and push digest file
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
