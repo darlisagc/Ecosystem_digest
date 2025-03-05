@@ -34,10 +34,6 @@ headers = {
 
 # Function to fetch GitHub activity within the previous calendar month
 def fetch_github_activity(repo):
-    # Categories:
-    # - issues_opened: issues created during the previous month
-    # - issues_closed: issues closed during the previous month
-    # - pr_merged: pull requests that were merged (and therefore closed) during the previous month
     activity = {"issues_opened": [], "issues_closed": [], "pr_merged": []}
 
     # Fetch PRs and include only those that are merged within the period
@@ -85,29 +81,32 @@ def fetch_github_activity(repo):
 repo_activities = {repo: fetch_github_activity(repo) for repo in repos}
 
 # Create digest text
-digest_content = "# Monthly Digest: Ecosystem Tooling - GitHub Activities\n\n"
+digest_content = "# Monthly Digest: Java Tooling GitHub Activities\n\n"
 digest_content += f"Period: {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}\n\n"
 
 # Only include repositories with activity in the digest
 repos_found = False
 for repo, activity in repo_activities.items():
     if not (activity["issues_opened"] or activity["pr_merged"] or activity["issues_closed"]):
-        continue  # Skip repos with no updates
+        continue  # Skip repositories with no updates
 
     repos_found = True
     repo_link = f"https://github.com/{repo}"
-    digest_content += f"## [{repo}]({repo_link})\n\n"
+    # Add a bullet icon before each repository
+    digest_content += f"## 🔹 [{repo}]({repo_link})\n\n"
 
     if activity["issues_opened"]:
-        digest_content += "**Issues opened:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
+        digest_content += "**Issues open:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
     if activity["pr_merged"]:
         digest_content += "**PRs merged & closed:**\n" + "\n".join(activity["pr_merged"]) + "\n\n"
     if activity["issues_closed"]:
         digest_content += "**Issues closed:**\n" + "\n".join(activity["issues_closed"]) + "\n\n"
 
-# If no repository had any activity, print a generic message
 if not repos_found:
-    digest_content += "No activity in this period.\n"
+    digest_content += "No significant activity in this period.\n"
+
+# Add a closing phrase with a nice message and an emoji
+digest_content += "\n---\n\nLet's keep building! 🚀\n"
 
 # Generate file name with month and year (e.g., github_digest_February_2025.md)
 filename = f"github_digest_{end_date.strftime('%B_%Y')}.md"
