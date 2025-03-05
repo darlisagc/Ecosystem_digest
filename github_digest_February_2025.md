@@ -2,6 +2,128 @@
 
 Period: 2025-02-01 to 2025-02-28
 
+## [cardano-foundation/cf-lob-platform](https://github.com/cardano-foundation/cf-lob-platform)
+
+**Issues open:**
+- [#149 - Idea: document transactions and reports metadata as part of CIP-10 registry entry for better discoverability](https://github.com/cardano-foundation/cf-reeve-platform/issues/149)
+- [#148 - Idea: explore alternative sinks, e.g. Plutus based sink for transactions and reports](https://github.com/cardano-foundation/cf-reeve-platform/issues/148)
+- [#147 - Community: CIP for Transactions and Reports on chain data](https://github.com/cardano-foundation/cf-reeve-platform/issues/147)
+
+**PRs merged & closed:**
+- [#166 - feat: first approach for event tests](https://github.com/cardano-foundation/cf-reeve-platform/pull/166)
+- [#165 - feat: organisation create and edit endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/165)
+- [#164 - fix: be reconciliation result no filter returns all transactions](https://github.com/cardano-foundation/cf-reeve-platform/pull/164)
+- [#163 - chore: adjusting authorization for reconcile endpoints according to P…](https://github.com/cardano-foundation/cf-reeve-platform/pull/163)
+- [#162 - feat: add data about last reconcilation + refactored](https://github.com/cardano-foundation/cf-reeve-platform/pull/162)
+- [#161 - fix: rename description field to taxIdNumber](https://github.com/cardano-foundation/cf-reeve-platform/pull/161)
+- [#160 - fix: kafka couldn't deserialize blockchain receipt](https://github.com/cardano-foundation/cf-reeve-platform/pull/160)
+- [#157 - chore : chart of account sub type](https://github.com/cardano-foundation/cf-reeve-platform/pull/157)
+- [#156 - chore :Enrich Report public interface with a currency field](https://github.com/cardano-foundation/cf-reeve-platform/pull/156)
+- [#155 - chore(follower-app): normalize some environment variables across profiles](https://github.com/cardano-foundation/cf-reeve-platform/pull/155)
+- [#154 - fix: fixing test](https://github.com/cardano-foundation/cf-reeve-platform/pull/154)
+- [#153 - Fix/set default value for mnemonic](https://github.com/cardano-foundation/cf-reeve-platform/pull/153)
+- [#152 - fix: added check to avoid pkey violation](https://github.com/cardano-foundation/cf-reeve-platform/pull/152)
+- [#151 - fix: extended tests refactored code](https://github.com/cardano-foundation/cf-reeve-platform/pull/151)
+- [#150 - Fix: Be incorrect reason for pending transaction status](https://github.com/cardano-foundation/cf-reeve-platform/pull/150)
+- [#146 - Feat/lob 906 public interface published transactions](https://github.com/cardano-foundation/cf-reeve-platform/pull/146)
+- [#145 - feat: [LOB-903] Public Interface - Published report for public view endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/145)
+- [#144 - chore: added security roles for saving/updating/deleting dashboards](https://github.com/cardano-foundation/cf-reeve-platform/pull/144)
+- [#143 - bugfix : [LOB-871] WatchDog service miss update event call](https://github.com/cardano-foundation/cf-reeve-platform/pull/143)
+- [#142 - fix: can't save submetrics](https://github.com/cardano-foundation/cf-reeve-platform/pull/142)
+- [#141 - feat: externalizing events](https://github.com/cardano-foundation/cf-reeve-platform/pull/141)
+- [#140 - feat: adding new metrics for incomeStatement and balanceSheet](https://github.com/cardano-foundation/cf-reeve-platform/pull/140)
+- [#139 - fix: adjusting categories](https://github.com/cardano-foundation/cf-reeve-platform/pull/139)
+- [#138 - feat: [LOB-555] accounting type sub type endpoint](https://github.com/cardano-foundation/cf-reeve-platform/pull/138)
+
+## [cardano-foundation/cardano-ibc-incubator](https://github.com/cardano-foundation/cardano-ibc-incubator)
+
+**Issues open:**
+- [#227 - [👷 Task]: Implement Ordered Channel Flow](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/227)
+- [#226 - [👷 Task]: Implement Close Channel Flow](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/226)
+- [#225 - [👷 Task]: Cross-Chain Token Swap via IBC: Cardano to Cosmos-Sidechain Using Osmosis](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/225)
+- [#224 - [👷 Task]: Run Vessel-Demo to Show Feasibility of Message Exchange Between Cardano and a Cosmos-Sidechain](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/224)
+- [#223 - [👷 Task]: Go Transaction Signing in the Relayer](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/223)
+- [#222 - [👷 Task]: Remove Outdated Cardano Light Client](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/222)
+- [#221 - [🚀 Feature]: Use Yaci DevKit Instead of Local Cardano Setup](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/221)
+
+**PRs merged & closed:**
+- [#235 - chore: fixed ID-111](https://github.com/cardano-foundation/cardano-ibc-incubator/pull/235)
+- [#233 - [ID-127] Simplified validation of receiving output](https://github.com/cardano-foundation/cardano-ibc-incubator/pull/233)
+- [#232 - [ID-112] Replace expensive `length` calls with alternative code](https://github.com/cardano-foundation/cardano-ibc-incubator/pull/232)
+- [#230 - chore: added docker command to fetch wallet lovelace balance](https://github.com/cardano-foundation/cardano-ibc-incubator/pull/230)
+- [#229 - Fix/id 101 less expect more and p2](https://github.com/cardano-foundation/cardano-ibc-incubator/pull/229)
+- [#228 - [FIX] ID-101 Repace `expect` with `and` when unnecessary - Part 1](https://github.com/cardano-foundation/cardano-ibc-incubator/pull/228)
+- [#220 - [FIX] Fixes to address feedback for ID-106](https://github.com/cardano-foundation/cardano-ibc-incubator/pull/220)
+- [#219 - Feat/split startup commands](https://github.com/cardano-foundation/cardano-ibc-incubator/pull/219)
+
+**Issues closed:**
+- [#217 - 🚨ID-127 Informational: Inefficient Payout](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/217)
+- [#202 - 🚨ID-112 Informational: Costly list.length calls](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/202)
+- [#201 - 🚨ID-111 Informational: Costly trim_space](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/201)
+- [#196 - 🚨ID-106 Informational: Redundant uint64() Usage](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/196)
+- [#191 - 🚨ID-101 Informational: expect over and](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/191)
+- [#145 - IBC Sidechain Bridge Setup Tool](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/145)
+
+## [cardano-foundation/cardano-rosetta-java](https://github.com/cardano-foundation/cardano-rosetta-java)
+
+**Issues open:**
+- [#298 - Testcontainers for End 2 End tests](https://github.com/cardano-foundation/cardano-rosetta-java/issues/298)
+- [#297 - ObjectMapper managed by Spring's context](https://github.com/cardano-foundation/cardano-rosetta-java/issues/297)
+- [#296 - Unit tests should have conway era cbors inside of json files](https://github.com/cardano-foundation/cardano-rosetta-java/issues/296)
+- [#294 - Add pruning-safe-blocks configuration for yaco-store pruning.](https://github.com/cardano-foundation/cardano-rosetta-java/issues/294)
+- [#290 - Upgrade to the latest Cardano Client Lib (0.6.3)](https://github.com/cardano-foundation/cardano-rosetta-java/issues/290)
+- [#288 - Add Vote Delegation Operation to Rosetta (Installment 1)](https://github.com/cardano-foundation/cardano-rosetta-java/issues/288)
+- [#287 - cannot move my stakes](https://github.com/cardano-foundation/cardano-rosetta-java/issues/287)
+- [#285 - problem during stake reward withdrawal](https://github.com/cardano-foundation/cardano-rosetta-java/issues/285)
+- [#284 - "Failed to configure a DataSource" when starting cardano-rosetta-java with docker compose](https://github.com/cardano-foundation/cardano-rosetta-java/issues/284)
+- [#283 - Improvements - /account/balance performance](https://github.com/cardano-foundation/cardano-rosetta-java/issues/283)
+- [#282 - add / improve integration tests for /account/balance](https://github.com/cardano-foundation/cardano-rosetta-java/issues/282)
+- [#281 - Tech introduce spring health endpoints for yaci-indexer and api](https://github.com/cardano-foundation/cardano-rosetta-java/issues/281)
+- [#278 - Yaci-store mithril snapshot](https://github.com/cardano-foundation/cardano-rosetta-java/issues/278)
+- [#277 - Transaction size mismatch leading to underestimated fee](https://github.com/cardano-foundation/cardano-rosetta-java/issues/277)
+- [#275 - Add transaction signing example code in java](https://github.com/cardano-foundation/cardano-rosetta-java/issues/275)
+
+**PRs merged & closed:**
+- [#295 - fix: use same method for calc tx size in both endpoints](https://github.com/cardano-foundation/cardano-rosetta-java/pull/295)
+- [#293 - chore: latest release upgraded](https://github.com/cardano-foundation/cardano-rosetta-java/pull/293)
+- [#291 - chore: docker standard env fixes.](https://github.com/cardano-foundation/cardano-rosetta-java/pull/291)
+- [#289 - feat: upgrade to the latest Cardano Client Lib, 0.6.3 which is Conway…](https://github.com/cardano-foundation/cardano-rosetta-java/pull/289)
+- [#280 - docs: add env var examples for performance tuning](https://github.com/cardano-foundation/cardano-rosetta-java/pull/280)
+- [#279 - chore: commons-io upgrade](https://github.com/cardano-foundation/cardano-rosetta-java/pull/279)
+- [#276 - feat: withdrawable rewards should be available on Rosetta's account/balance endpoint for a given stake address.](https://github.com/cardano-foundation/cardano-rosetta-java/pull/276)
+- [#274 - chore: add workflow dispatch](https://github.com/cardano-foundation/cardano-rosetta-java/pull/274)
+
+**Issues closed:**
+- [#290 - Upgrade to the latest Cardano Client Lib (0.6.3)](https://github.com/cardano-foundation/cardano-rosetta-java/issues/290)
+- [#272 - Add Rewards data to rosetta-java](https://github.com/cardano-foundation/cardano-rosetta-java/issues/272)
+
+## [cardano-foundation/cardano-devkit](https://github.com/cardano-foundation/cardano-devkit)
+
+_No significant activity in this period._
+
+## [cardano-foundation/cf-cardano-ballot](https://github.com/cardano-foundation/cf-cardano-ballot)
+
+_No significant activity in this period._
+
+## [cardano-foundation/cip30-data-signature-parser](https://github.com/cardano-foundation/cip30-data-signature-parser)
+
+_No significant activity in this period._
+
+## [cardano-foundation/cardano-connect-with-wallet](https://github.com/cardano-foundation/cardano-connect-with-wallet)
+
+_No significant activity in this period._
+
+## [cardano-foundation/cf-adahandle-resolver](https://github.com/cardano-foundation/cf-adahandle-resolver)
+
+_No significant activity in this period._
+
+## [cardano-foundation/cf-java-rewards-calculation](https://github.com/cardano-foundation/cf-java-rewards-calculation)
+
+**PRs merged & closed:**
+- [#62 - chore(main): release 1.0.0](https://github.com/cardano-foundation/cf-java-rewards-calculation/pull/62)
+- [#61 - chore(main): release 0.14.0](https://github.com/cardano-foundation/cf-java-rewards-calculation/pull/61)
+- [#60 - fix: Fix rounding error in reserves in Preview epoch 372](https://github.com/cardano-foundation/cf-java-rewards-calculation/pull/60)
+
 ## [bloxbean/cardano-client-lib](https://github.com/bloxbean/cardano-client-lib)
 
 **Issues open:**
@@ -9,6 +131,14 @@ Period: 2025-02-01 to 2025-02-28
 
 **PRs merged & closed:**
 - [#487 - Enhance UtxoSelectionStrategy for HDWallet](https://github.com/bloxbean/cardano-client-lib/pull/487)
+
+## [bloxbean/yaci-devkit](https://github.com/bloxbean/yaci-devkit)
+
+**Issues open:**
+- [#108 - Datum view stretches out the screen for long enough datums in the Yaci Viewer](https://github.com/bloxbean/yaci-devkit/issues/108)
+- [#107 - [Yaci Viewer] Add a page with AdaPot related information](https://github.com/bloxbean/yaci-devkit/issues/107)
+- [#106 - Verify Devkit setup with Podman and rootless mode](https://github.com/bloxbean/yaci-devkit/issues/106)
+- [#105 - YACI-CLI allow block time of less than 1 second](https://github.com/bloxbean/yaci-devkit/issues/105)
 
 ## [bloxbean/yaci](https://github.com/bloxbean/yaci)
 
@@ -26,7 +156,7 @@ Period: 2025-02-01 to 2025-02-28
 **Issues open:**
 - [#461 - Rename local tables to live_* for n2c data](https://github.com/bloxbean/yaci-store/issues/461)
 - [#458 - [governance test] Extract drep distr / spo distr data from DBSync to compare](https://github.com/bloxbean/yaci-store/issues/458)
-- [#457 - [governance] Handle in the case when the constitution committee is in a no-confidence state](https://github.com/bloxbean/yaci-store/issues/457)
+- [#457 - [governance] Handle the case when the constitution committee is in a no-confidence state](https://github.com/bloxbean/yaci-store/issues/457)
 - [#455 - Update the committee and constitution after the corresponding governance action is enacted](https://github.com/bloxbean/yaci-store/issues/455)
 - [#454 - [apapot] Adjust treasury amount based on treasury withdrawal action ratification](https://github.com/bloxbean/yaci-store/issues/454)
 - [#451 - Track stake registration deposit in stake_registration table](https://github.com/bloxbean/yaci-store/issues/451)
@@ -39,7 +169,7 @@ Period: 2025-02-01 to 2025-02-28
 - [#440 - [Epoch API] Add missing values to latest epoch endpoint](https://github.com/bloxbean/yaci-store/issues/440)
 - [#439 - [preview] The 'amount' values in drep_dist are incorrect at epoch 646](https://github.com/bloxbean/yaci-store/issues/439)
 - [#438 - Handle treasury donation](https://github.com/bloxbean/yaci-store/issues/438)
-- [#437 - [governance] Handle case when DRep becomes inactive](https://github.com/bloxbean/yaci-store/issues/437)
+- [#437 - [governance] Implement handling for DRep expiry](https://github.com/bloxbean/yaci-store/issues/437)
 - [#435 - Yaci-Store not working and gets stuck on the mainnet reply from genesis with account module enabled](https://github.com/bloxbean/yaci-store/issues/435)
 - [#434 - Fetching Params bug](https://github.com/bloxbean/yaci-store/issues/434)
 - [#432 - [adapot] governance proposal deposits, drep registrations deposits](https://github.com/bloxbean/yaci-store/issues/432)
@@ -70,13 +200,4 @@ Period: 2025-02-01 to 2025-02-28
 - [#395 - [Adapot] DRep stake snapshot ](https://github.com/bloxbean/yaci-store/issues/395)
 - [#383 - [Preview] Error log while trying to save scripts into the script table](https://github.com/bloxbean/yaci-store/issues/383)
 - [#370 - Incorrect redeemer data in datum table in RC 6 snapshot](https://github.com/bloxbean/yaci-store/issues/370)
-- [#365 - Add Read-Only Mode Support to Yaci-Store](https://github.com/bloxbean/yaci-store/issues/365)
-
-## [bloxbean/yaci-devkit](https://github.com/bloxbean/yaci-devkit)
-
-**Issues open:**
-- [#108 - Datum view stretches out the screen for long enough datums in the Yaci Viewer](https://github.com/bloxbean/yaci-devkit/issues/108)
-- [#107 - [Yaci Viewer] Add a page with AdaPot related information](https://github.com/bloxbean/yaci-devkit/issues/107)
-- [#106 - Verify Devkit setup with Podman and rootless mode](https://github.com/bloxbean/yaci-devkit/issues/106)
-- [#105 - YACI-CLI allow block time of less than 1 second](https://github.com/bloxbean/yaci-devkit/issues/105)
 
