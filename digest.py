@@ -23,11 +23,8 @@ github_api_base = "https://api.github.com/repos/"
 
 # Calculate the start and end dates for the previous calendar month
 now = datetime.datetime.now(datetime.timezone.utc)
-# First day of the current month
 first_day_current_month = datetime.datetime(now.year, now.month, 1)
-# Last day of the previous month is one day before the first day of the current month
 end_date = first_day_current_month - datetime.timedelta(days=1)
-# Start date is the first day of the previous month
 start_date = datetime.datetime(end_date.year, end_date.month, 1)
 
 # GitHub API headers
@@ -91,7 +88,13 @@ repo_activities = {repo: fetch_github_activity(repo) for repo in repos}
 digest_content = "# Monthly Digest: Java Tooling GitHub Activities\n\n"
 digest_content += f"Period: {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}\n\n"
 
+# Only include repositories with activity in the digest
+repos_found = False
 for repo, activity in repo_activities.items():
+    if not (activity["issues_opened"] or activity["pr_merged"] or activity["issues_closed"]):
+        continue  # Skip repos with no updates
+
+    repos_found = True
     repo_link = f"https://github.com/{repo}"
     digest_content += f"## [{repo}]({repo_link})\n\n"
 
@@ -102,8 +105,9 @@ for repo, activity in repo_activities.items():
     if activity["issues_closed"]:
         digest_content += "**Issues closed:**\n" + "\n".join(activity["issues_closed"]) + "\n\n"
 
-    if not (activity["issues_opened"] or activity["pr_merged"] or activity["issues_closed"]):
-        digest_content += "_No significant activity in this period._\n\n"
+# If no repository had any activity, print a generic message
+if not repos_found:
+    digest_content += "No significant activity in this period.\n"
 
 # Generate file name with month and year (e.g., github_digest_February_2025.md)
 filename = f"github_digest_{end_date.strftime('%B_%Y')}.md"
