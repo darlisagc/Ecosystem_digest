@@ -1,4 +1,4 @@
-# Monthly Digest: Java Tooling GitHub Activities
+# Monthly Digest: Java Tooling - GitHub Activities
 
 Period: 2025-02-01 to 2025-02-28
 
@@ -96,26 +96,6 @@ Period: 2025-02-01 to 2025-02-28
 **Issues closed:**
 - [#290 - Upgrade to the latest Cardano Client Lib (0.6.3)](https://github.com/cardano-foundation/cardano-rosetta-java/issues/290)
 - [#272 - Add Rewards data to rosetta-java](https://github.com/cardano-foundation/cardano-rosetta-java/issues/272)
-
-## [cardano-foundation/cardano-devkit](https://github.com/cardano-foundation/cardano-devkit)
-
-_No significant activity in this period._
-
-## [cardano-foundation/cf-cardano-ballot](https://github.com/cardano-foundation/cf-cardano-ballot)
-
-_No significant activity in this period._
-
-## [cardano-foundation/cip30-data-signature-parser](https://github.com/cardano-foundation/cip30-data-signature-parser)
-
-_No significant activity in this period._
-
-## [cardano-foundation/cardano-connect-with-wallet](https://github.com/cardano-foundation/cardano-connect-with-wallet)
-
-_No significant activity in this period._
-
-## [cardano-foundation/cf-adahandle-resolver](https://github.com/cardano-foundation/cf-adahandle-resolver)
-
-_No significant activity in this period._
 
 ## [cardano-foundation/cf-java-rewards-calculation](https://github.com/cardano-foundation/cf-java-rewards-calculation)
 
