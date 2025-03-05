@@ -81,7 +81,7 @@ def fetch_github_activity(repo):
 repo_activities = {repo: fetch_github_activity(repo) for repo in repos}
 
 # Create digest text
-digest_content = "# Monthly Digest: Java Tooling GitHub Activities\n\n"
+digest_content = "# Monthly Digest: Ecosystem Tooling - GitHub Activities\n\n"
 digest_content += f"Period: {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}\n\n"
 
 # Only include repositories with activity in the digest
@@ -96,7 +96,7 @@ for repo, activity in repo_activities.items():
     digest_content += f"## 🔹 [{repo}]({repo_link})\n\n"
 
     if activity["issues_opened"]:
-        digest_content += "**Issues open:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
+        digest_content += "**Issues opened:**\n" + "\n".join(activity["issues_opened"]) + "\n\n"
     if activity["pr_merged"]:
         digest_content += "**PRs merged & closed:**\n" + "\n".join(activity["pr_merged"]) + "\n\n"
     if activity["issues_closed"]:
