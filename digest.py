@@ -85,7 +85,7 @@ def fetch_github_activity(repo):
 repo_activities = {repo: fetch_github_activity(repo) for repo in repos}
 
 # Create digest text
-digest_content = "# Monthly Digest: Java Tooling GitHub Activities\n\n"
+digest_content = "# Monthly Digest: Java Tooling - GitHub Activities\n\n"
 digest_content += f"Period: {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}\n\n"
 
 # Only include repositories with activity in the digest
@@ -107,7 +107,7 @@ for repo, activity in repo_activities.items():
 
 # If no repository had any activity, print a generic message
 if not repos_found:
-    digest_content += "No significant activity in this period.\n"
+    digest_content += "No activity in this period.\n"
 
 # Generate file name with month and year (e.g., github_digest_February_2025.md)
 filename = f"github_digest_{end_date.strftime('%B_%Y')}.md"
