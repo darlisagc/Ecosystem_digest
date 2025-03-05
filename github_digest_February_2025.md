@@ -1,10 +1,10 @@
-# Monthly Digest: Java Tooling - GitHub Activities
+# Monthly Digest: Ecosystem Tooling - GitHub Activities
 
 Period: 2025-02-01 to 2025-02-28
 
 ## [cardano-foundation/cf-lob-platform](https://github.com/cardano-foundation/cf-lob-platform)
 
-**Issues open:**
+**Issues opened:**
 - [#149 - Idea: document transactions and reports metadata as part of CIP-10 registry entry for better discoverability](https://github.com/cardano-foundation/cf-reeve-platform/issues/149)
 - [#148 - Idea: explore alternative sinks, e.g. Plutus based sink for transactions and reports](https://github.com/cardano-foundation/cf-reeve-platform/issues/148)
 - [#147 - Community: CIP for Transactions and Reports on chain data](https://github.com/cardano-foundation/cf-reeve-platform/issues/147)
@@ -37,7 +37,7 @@ Period: 2025-02-01 to 2025-02-28
 
 ## [cardano-foundation/cardano-ibc-incubator](https://github.com/cardano-foundation/cardano-ibc-incubator)
 
-**Issues open:**
+**Issues opened:**
 - [#227 - [👷 Task]: Implement Ordered Channel Flow](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/227)
 - [#226 - [👷 Task]: Implement Close Channel Flow](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/226)
 - [#225 - [👷 Task]: Cross-Chain Token Swap via IBC: Cardano to Cosmos-Sidechain Using Osmosis](https://github.com/cardano-foundation/cardano-ibc-incubator/issues/225)
@@ -66,7 +66,7 @@ Period: 2025-02-01 to 2025-02-28
 
 ## [cardano-foundation/cardano-rosetta-java](https://github.com/cardano-foundation/cardano-rosetta-java)
 
-**Issues open:**
+**Issues opened:**
 - [#298 - Testcontainers for End 2 End tests](https://github.com/cardano-foundation/cardano-rosetta-java/issues/298)
 - [#297 - ObjectMapper managed by Spring's context](https://github.com/cardano-foundation/cardano-rosetta-java/issues/297)
 - [#296 - Unit tests should have conway era cbors inside of json files](https://github.com/cardano-foundation/cardano-rosetta-java/issues/296)
@@ -106,7 +106,7 @@ Period: 2025-02-01 to 2025-02-28
 
 ## [bloxbean/cardano-client-lib](https://github.com/bloxbean/cardano-client-lib)
 
-**Issues open:**
+**Issues opened:**
 - [#490 - [Wallet] Wallet as fee payer / collateral payer in ScriptTx](https://github.com/bloxbean/cardano-client-lib/issues/490)
 
 **PRs merged & closed:**
@@ -114,7 +114,7 @@ Period: 2025-02-01 to 2025-02-28
 
 ## [bloxbean/yaci-devkit](https://github.com/bloxbean/yaci-devkit)
 
-**Issues open:**
+**Issues opened:**
 - [#108 - Datum view stretches out the screen for long enough datums in the Yaci Viewer](https://github.com/bloxbean/yaci-devkit/issues/108)
 - [#107 - [Yaci Viewer] Add a page with AdaPot related information](https://github.com/bloxbean/yaci-devkit/issues/107)
 - [#106 - Verify Devkit setup with Podman and rootless mode](https://github.com/bloxbean/yaci-devkit/issues/106)
@@ -122,7 +122,7 @@ Period: 2025-02-01 to 2025-02-28
 
 ## [bloxbean/yaci](https://github.com/bloxbean/yaci)
 
-**Issues open:**
+**Issues opened:**
 - [#107 - Verify Devkit setup with Podman and rootless mode](https://github.com/bloxbean/yaci/issues/107)
 - [#106 - Issue with DelegationsAndRewardAccountsQuery.java](https://github.com/bloxbean/yaci/issues/106)
 
@@ -133,7 +133,7 @@ Period: 2025-02-01 to 2025-02-28
 
 ## [bloxbean/yaci-store](https://github.com/bloxbean/yaci-store)
 
-**Issues open:**
+**Issues opened:**
 - [#461 - Rename local tables to live_* for n2c data](https://github.com/bloxbean/yaci-store/issues/461)
 - [#458 - [governance test] Extract drep distr / spo distr data from DBSync to compare](https://github.com/bloxbean/yaci-store/issues/458)
 - [#457 - [governance] Handle the case when the constitution committee is in a no-confidence state](https://github.com/bloxbean/yaci-store/issues/457)
